@@ -1,7 +1,13 @@
+//Add a feature where, on the command line, you can optionally provide an argument to output 
+//to a file instead of printing to the console. The argument should look like this: --out 
+//output-filename.txt readfile-or-url.However, if --out follows your script name, it should 
+//take the next argument and use that as the path to write to.
+//Make sure you handle errors trying to write to the file:
+
+
 const fs = require('fs');
 const process = require('process');
 const axios = require('axios');
-
 
 function handleOutput(text, out) {
   if (out) {
